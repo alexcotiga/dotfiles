@@ -1,0 +1,46 @@
+# Ghostty configuration
+# theme = light:Modus Operandi Tinted,dark:Modus Vivendi Tinted
+# theme = light:Gruvbox Light Hard,dark:Gruvbox Dark Hard
+# theme = light:Rose Pine Dawn,dark:Rose Pine
+#theme = light:Catppuccin Latte,dark:Catppuccin Mocha
+theme = Gruber Darker
+
+# font-family = Hack Nerd Font Mono
+# font-family = Aporetic Sans Mono
+keybind = global:cmd+shift+T=toggle_quick_terminal
+# macos-option-as-alt = true
+keybind = alt+left=unbind
+keybind = alt+right=unbind
+macos-titlebar-style = tabs
+# background-opacity = 0.9
+# background-blur = true
+window-padding-y = 20
+window-padding-x = 20
+
+#theme = Catppuccin Mocha
+#theme = Modus Operandi
+#theme = Batman
+# theme = Gruvbox Light
+
+font-family = Fira Code
+# font-family = JetBrains Mono
+#font-family = Iosevka Term
+font-style = Retina
+#font-style-bold = Extrabold Extended
+#font-style-italic = Semibold Extended Italic
+#font-style-bold-italic = Extrabold Extended Italic
+
+#font-family = Hack Nerd Font Mono
+#font-feature = -calt
+#font-feature = -dlig
+#font-feature = -liga
+font-size = 14
+
+keybind = shift+enter=text:\n
+maximize = true
+window-new-tab-position = end
+window-save-state = always
+# cursor-color = #000000
+# shell-integration-features = no-cursor
+# cursor-style = underline
+adjust-cursor-thickness = 200%

@@ -1,0 +1,82 @@
+# theme = "modus_operandi_tinted"
+# Gruber Darker is a dark-only theme.
+theme = "gruber-darker"
+# theme = "catppuccin_mocha"
+
+[editor]
+# Show currently open buffers, only when more than one exists.
+bufferline = "multiple"
+
+# Highlight all lines with a cursor
+cursorline = true
+
+# Show a ruler at column 120
+# rulers = [120]
+
+# Force the theme to show colors
+true-color = true
+
+# show border everywhere, esp for LSP/completions
+# otherwise the popup text is hard to differentiate from buffer text.
+popup-border = "all"
+
+# for inline diagnostics
+end-of-line-diagnostics = "error"
+
+[editor.file-picker]
+# Show hidden files in the file picker.
+hidden = false
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.indent-guides]
+character = "╎"
+render = true
+
+[editor.statusline]
+left = ["mode", "spinner", "version-control", "file-name"]
+
+[editor.lsp]
+display-inlay-hints = true
+
+# Disable automatically popups of signature parameter help
+auto-signature-help = false
+
+# Show LSP messages in the status line
+display-messages = true
+
+[editor.inline-diagnostics]
+cursor-line = "hint"
+
+[keys.normal]
+# easy buffer switching
+"A-," = "goto_previous_buffer"
+"A-." = "goto_next_buffer"
+# move `repeat_last_motion` from A-. to A-/
+"A-/" = "repeat_last_motion"
+
+# keep in sync with section in `[keys.select]`
+"A-x" = ["extend_line_up", "extend_to_line_bounds"]
+# move `shink_to_line_bounds` to shift-x,
+# making space for A-x to shrink a region selected by `x`,
+# which is a common mistake, to overselect.
+#
+# remember, `shrink_to_line_bounds` is useful to
+# make a selection start/end exactly on line bounds,
+# such as the lines between two markers, like "(...)"
+"X" = "shrink_to_line_bounds"
+
+[keys.select]
+"A-x" = ["extend_line_up", "extend_to_line_bounds"]
+"X" = "shrink_to_line_bounds"
+
+[keys.insert]
+# > Esc to go back to normal mode is a choice from a time when the escape key was
+# > in the place where we have capslock on a normal keyboard.
+# > Reaching for escape every time is annoying.
+# > Add this to your config to go back to normal mode by pressing jk in insert mode.
+# via: https://felix-knorr.net/posts/2025-03-16-helix-review.html
+j = { k = "normal_mode"}
